@@ -18,7 +18,7 @@ const CourseList = ({ courses }) => (
                     <tr key={course.slug}>
                         <td>
                             <a className='btn btn-light'
-                                href={'http://localhost:3001/courses/' + course.slug}
+                                href={'https://www.pluralsight.com/courses/react-redux-react-router-es6' + course.slug}
                             >
                                 Watch
                         </a>
