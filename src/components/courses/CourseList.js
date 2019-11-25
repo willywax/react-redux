@@ -19,9 +19,10 @@ const CourseList = ({ courses }) => (
             <td>
               <a
                 className="btn btn-light"
+                target="_blank"
+                rel="noopener noreferrer"
                 href={
-                  "https://www.pluralsight.com/courses/react-redux-react-router-es6" +
-                  course.slug
+                  "https://www.pluralsight.com/courses/react-redux-react-router-es6"
                 }
               >
                 Watch
