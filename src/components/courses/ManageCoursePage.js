@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { loadCourses, saveCourse } from "../../redux/actions/courseActions";
 import { loadAuthors } from "../../redux/actions/authorActions";
 import CourseForm from './CourseForm';
-import { newCourse } from "../../../tools/mockData";
+import { newCourse } from "../../__mock__";
 import { toast } from "react-toastify";
 
 function ManageCoursePage({ courses, authors, loadAuthors, loadCourses, saveCourse, history,...props }){
@@ -29,12 +29,9 @@ function ManageCoursePage({ courses, authors, loadAuthors, loadCourses, saveCour
 
   function handleChange(event){
     const {name , value} = event.target;
-    setCourse(prevCourse =>({
-      ...prevCourse,
+    setCourse({
+      ...course,
       [name]: name === 'authorId' ? parseInt(value, 10) : value
-    })).catch(error=>{
-      setSaving(false);
-      setError( {onSave: error})
     })
   }
 
