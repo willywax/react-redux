@@ -33,7 +33,7 @@ class CoursePage extends React.Component {
         return (
             <>
              {this.state.redirectToCourseForm && <Redirect to="/course" />}
-                <button className='btn btn-primary'
+                <button id="add-course" className='btn btn-primary'
                      onClick={()=>{
                          this.setState({redirectToCourseForm: true})
                      }}
